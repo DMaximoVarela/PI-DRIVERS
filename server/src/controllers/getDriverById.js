@@ -11,7 +11,27 @@ module.exports = async (req, res) => {
 
       const { name, description, image, dob, nationality, teams } = data;
 
-      const driver = { id, name, description, image, dob, nationality, teams };
+      const imageUrl =
+        image && image.url !== ""
+          ? image.url
+          : "https://i.ibb.co/xXkGSF9/98-sin-t-tulo-20231215173819.png";
+      const imageBy =
+        image && image.imageby !== ""
+          ? image.imageby
+          : "https://ibb.co/Cmcv5PC";
+
+      const driver = {
+        id,
+        name,
+        description,
+        image: {
+          url: imageUrl,
+          imageby: imageBy,
+        },
+        dob,
+        nationality,
+        teams,
+      };
 
       return res.status(200).json(driver);
     } else if (id >= 509) {

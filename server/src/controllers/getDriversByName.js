@@ -1,6 +1,6 @@
 const axios = require("axios");
 const { Driver, Team } = require("../db");
-const URL = "http://localhost:5000/drivers";
+const URL = "http://localhost:3001/drivers";
 const { Op } = require("sequelize");
 
 module.exports = async (req, res) => {
