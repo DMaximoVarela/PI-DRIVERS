@@ -8,11 +8,11 @@ const getDriversByName = require("../controllers/getDriversByName");
 const postDriver = require("../controllers/postDriver");
 const getTeams = require("../controllers/getTeams");
 
-router.get("/drivers", getDrivers);
-
 router.get("/drivers/:id", getDriversById);
 
-router.get("/driver", getDriversByName);
+router.get("/drivers", getDriversByName);
+
+router.get("/drivers", getDrivers);
 
 router.post("/drivers", postDriver);
 

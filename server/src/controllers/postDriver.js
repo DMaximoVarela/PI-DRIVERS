@@ -5,18 +5,17 @@ module.exports = async (req, res) => {
     const { forename, surname, description, image, nationality, dob, teams } =
       req.body;
 
-    const [teamsCreated] = await Team.findOrCreate({ where: { name: teams } });
-
-    const [driver] = await Driver.findOrCreate({
-      where: {
-        forename,
-        surname,
-        description,
-        image,
-        nationality,
-        dob,
-      },
+    const driver = await Driver.create({
+      forename,
+      surname,
+      description,
+      image,
+      nationality,
+      dob,
     });
+    const team = await Team.create({ name: teams });
+
+    await driver.addTeam(team);
 
     const driver_team = {
       id: driver.id,
@@ -24,12 +23,12 @@ module.exports = async (req, res) => {
       image: driver.image,
       dob: driver.dob,
       nationality: driver.nationality,
-      teams: teamsCreated.name,
+      teams: team.name,
       description: driver.description,
     };
 
     return res.status(200).json(driver_team);
   } catch (error) {
-    res.status(500).json({ error: error.message });
+    res.status(500).json({ error: error });
   }
 };
