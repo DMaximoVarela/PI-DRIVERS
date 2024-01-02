@@ -7,8 +7,8 @@
       "code": "HAM",
       "name": { "forename": "Lewis", "surname": "Hamilton" },
       "image": {
-        "url": "https://a.espncdn.com/combiner/i?img=/i/headshots/rpm/players/full/868.png",
-        "imageby": "https://www.espn.com/racing/driver/_/id/868/lewis-hamilton"
+        "url": "https://upload.wikimedia.org/wikipedia/commons/1/18/Lewis_Hamilton_2016_Malaysia_2.jpg",
+        "imageby": "By Morio - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=52060566"
       },
       "dob": "1985-01-07",
       "nationality": "British",
@@ -23,8 +23,8 @@
       "code": "HEI",
       "name": { "forename": "Nick", "surname": "Heidfeld" },
       "image": {
-        "url": "https://storage.googleapis.com/ecm-prod/assets/1/pilote/17/Nick_Heidfeld_2_0f5b50.png",
-        "imageby": "https://www.fiawec.com/en/driver/17"
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Nick_Heidfeld_Goodwood_Festival_of_Speed_2019_%2848242681251%29.jpg/330px-Nick_Heidfeld_Goodwood_Festival_of_Speed_2019_%2848242681251%29.jpg",
+        "imageby": "By https://www.flickr.com/photos/69527563@N05/ - https://www.flickr.com/photos/69527563@N05/48242681251/, CC BY 2.0, https://commons.wikimedia.org/w/index.php?curid=80386033"
       },
       "dob": "1977-05-10",
       "nationality": "German",

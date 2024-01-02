@@ -36,7 +36,7 @@ module.exports = async (req, res) => {
       return {
         id: driver.id,
         name: { forename: driver.forename, surname: driver.surname },
-        image: driver.image,
+        image: { url: driver.image },
         dob: driver.dob,
         nationality: driver.nationality,
         teams: relatedTeams.shift(),

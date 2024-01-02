@@ -14,11 +14,11 @@ module.exports = async (req, res) => {
       const imageUrl =
         image && image.url !== ""
           ? image.url
-          : "https://i.ibb.co/xXkGSF9/98-sin-t-tulo-20231215173819.png";
+          : "https://cdn.pixabay.com/photo/2013/07/12/15/36/motorsports-150157_960_720.png";
       const imageBy =
         image && image.imageby !== ""
           ? image.imageby
-          : "https://ibb.co/Cmcv5PC";
+          : "https://pixabay.com/es/vectors/automovilismo-deportes-de-motor-150157/";
 
       const driver = {
         id,
@@ -42,7 +42,7 @@ module.exports = async (req, res) => {
       const driver_team = {
         id: driver.id,
         name: { forename: driver.forename, surname: driver.surname },
-        image: driver.image,
+        image: { url: driver.image },
         dob: driver.dob,
         nationality: driver.nationality,
         teams: team.name,
